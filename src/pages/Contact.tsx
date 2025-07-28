@@ -34,9 +34,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 md:pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-6">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="fade-in">
             <h1 className="mb-8">Contact Us</h1>

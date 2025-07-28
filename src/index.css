@@ -111,20 +111,20 @@ All colors MUST be HSL.
 
   /* Typography system */
   h1 {
-    @apply text-5xl md:text-7xl font-bold tracking-tight leading-none;
+    @apply text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-none;
   }
 
   h2 {
-    @apply text-3xl md:text-5xl font-bold tracking-tight;
+    @apply text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight;
   }
 
   h3 {
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-lg sm:text-xl md:text-2xl font-semibold;
   }
 
   /* Custom components */
   .hero-text {
-    @apply text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none;
+    @apply text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tighter leading-none;
   }
 
   .nav-link {
