@@ -4,82 +4,51 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="min-h-screen overflow-hidden">
-      {/* Radical Split Hero Section */}
-      <section className="min-h-screen flex items-center relative px-4 sm:px-6 pt-20 md:pt-24 pb-16">
-        <div className="max-w-none w-full">
-          {/* Split Layout */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-[80vh]">
-            {/* Left Side - Main Text */}
-            <div className="space-y-4 lg:pr-8">
-              <div className="fade-in">
-                <div className="hero-left text-foreground mb-2">
-                  MAKING
-                </div>
-                <div className="hero-left text-foreground mb-2">
-                  THE
-                </div>
-                <div className="hero-left text-foreground mb-2">
-                  WORLD
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Secondary Text with Glitch Effect */}
-            <div className="space-y-4 lg:pl-8 lg:border-l border-accent">
-              <div className="slide-up animation-delay-300">
-                <div className="hero-right text-accent glitch-text mb-4" data-text="A DIGITAL">
-                  A DIGITAL
-                </div>
-                <div className="hero-right text-muted-foreground mb-4">
-                  EXTENSION
-                </div>
-                <div className="hero-right text-foreground mb-4">
-                  OF
-                </div>
-                <div className="hero-right text-accent glitch-text" data-text="MEANINGFUL">
-                  MEANINGFUL
-                </div>
-                <div className="hero-right text-foreground">
-                  REALITY
-                </div>
-              </div>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center relative px-4 sm:px-6 pt-20 md:pt-24 pb-16">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="fade-in">
+            <h1 className="hero-text mb-6 sm:mb-8">
+              MAKING
+              <br />
+              THE WORLD
+              <br />
+              A DIGITAL
+              <br />
+              EXTENSION
+              <br />
+              OF
+              <br />
+              MEANINGFUL
+              <br />
+              REALITY
+            </h1>
+          </div>
+          
+          <div className="slide-up animation-delay-300">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
+              We create digital experiences that bridge the gap between imagination and reality,
+              crafting solutions that matter.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <Button asChild size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6 group">
+                <Link to="/portfolio">
+                  View Our Work
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-6">
+                <Link to="/about">Learn More</Link>
+              </Button>
             </div>
           </div>
+        </div>
 
-          {/* Bottom Section */}
-          <div className="absolute bottom-20 left-4 sm:left-6 right-4 sm:right-6">
-            <div className="grid md:grid-cols-2 gap-8 items-end">
-              {/* Description */}
-              <div className="slide-up animation-delay-500">
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-md">
-                  We destroy conventional thinking and rebuild it into radical digital experiences 
-                  that challenge reality itself.
-                </p>
-              </div>
-
-              {/* Actions */}
-              <div className="slide-up animation-delay-700">
-                <div className="flex flex-col sm:flex-row gap-3 md:justify-end">
-                  <Button asChild className="group border border-accent bg-transparent hover:bg-accent hover:text-accent-foreground transition-all duration-300">
-                    <Link to="/portfolio">
-                      <span className="font-mono text-xs uppercase tracking-widest">
-                        ENTER_REALITY
-                      </span>
-                      <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" className="border-muted-foreground text-muted-foreground hover:text-foreground hover:border-foreground">
-                    <Link to="/about">
-                      <span className="font-mono text-xs uppercase tracking-widest">
-                        DECODE_MORE
-                      </span>
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="h-5 w-5 sm:h-6 sm:w-6 text-muted-foreground" />
         </div>
       </section>
 
